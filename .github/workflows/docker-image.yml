@@ -20,8 +20,6 @@ jobs:
     - name: Build and push the Docker image
       run: |
         docker build . --file ./sample-packages/docker/Dockerfile --tag $IMAGE_NAME:$(date +%s)
-        docker tag IMAGE_ID ghcr.io/$OWNER/$IMAGE_NAME:latest
-        docker push ghcr.io/$OWNER/$IMAGE_NAME:latest
     - name: Log into registry ${{ env.REGISTRY }}
       uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
       with:
