@@ -29,4 +29,4 @@ jobs:
         echo $TAG
         docker build . --file ./sample-packages/docker/Dockerfile --tag $IMAGE_NAME:$TAG
         docker tag $IMAGE_NAME:$TAG ghcr.io/$OWNER/$IMAGE_NAME:latest
-        docker push ghcr.io/$OWNER/$IMAGE_NAME:latest
+        docker push $IMAGE_NAME:$TAG
