@@ -17,6 +17,6 @@ jobs:
     - name: Build and push the Docker image
       run: |
         docker build . --file ./sample-packages/docker/Dockerfile --tag my-image-name:$(date +%s)
-        echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
-        docker tag IMAGE_ID ghcr.io/OWNER/IMAGE_NAME:latest
-        docker push ghcr.io/OWNER/IMAGE_NAME:latest
+        echo $GITHUB_TOKEN | docker login ghcr.io -u amadub --password-stdin
+        docker tag IMAGE_ID ghcr.io/amadub/my-image-name:latest
+        docker push ghcr.io/amadub/my-image-name:latest
