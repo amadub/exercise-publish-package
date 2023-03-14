@@ -27,6 +27,6 @@ jobs:
       run: |
         export TAG=$($IMAGE_NAME:$(date +%s))
         echo $TAG
-        docker build . --file ./sample-packages/docker/Dockerfile --tag $IMAGE_NAME:$(date +%s)
-        docker tag $TAG ghcr.io/$OWNER/$IMAGE_NAME:latest
-        docker push ghcr.io/$OWNER/$IMAGE_NAME:latest
+        #docker build . --file ./sample-packages/docker/Dockerfile --tag $IMAGE_NAME:$(date +%s)
+        #docker tag $TAG ghcr.io/$OWNER/$IMAGE_NAME:latest
+        #docker push ghcr.io/$OWNER/$IMAGE_NAME:latest
